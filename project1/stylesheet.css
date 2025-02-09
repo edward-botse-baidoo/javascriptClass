@@ -46,8 +46,22 @@
 }
 
 #gameText {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+#scoreText {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    background: 5px rgba(0, 0, 0, 0.564);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    outline: solid black;
 }
 
 #trueButton:hover {
