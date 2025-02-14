@@ -47,12 +47,17 @@ for (const course of collegeCourses) {
    let courseBuilding = document.createElement('p');
    let courseDesc = document.createElement('p');
 
+   let toggleButton = document.createElement('button')
+
    courseName.textContent = `${course.name}`;
    courseStart.textContent = `Start Time: ${course.startTime}`;
    courseRoom.textContent = `Classroom: ${course.classroom}`;
    courseBuilding.content = `Building: ${course.building}`;
    courseDesc.textContent = `Description: ${course.description}`;
 
+   toggleButton.textContent = 'Toggle Details';
+   
+   toggleButton.classLis.add('toggleButton')
    courseName.classList.add("courseHeader");
    courseInfo.classList.add("infoContainer");
    classContainer.classList.add("classContainer")
@@ -62,11 +67,14 @@ for (const course of collegeCourses) {
    courseInfo.appendChild(courseBuilding);
    courseInfo.appendChild(courseDesc);
 
+   
+
 
 
    classContainer.appendChild(courseName);
-   classContainer.appendChild(courseInfo);
+   classContainer.appendChild(toggleButton);
    originalCourseList.appendChild(classContainer);
+   
 
    
 }
