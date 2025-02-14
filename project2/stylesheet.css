@@ -1,0 +1,75 @@
+body, html {
+    height: 100%;
+}
+
+#overallContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.childContainer {
+    height: 100vh;
+    width: 380px;
+    background-color: rgb(192, 231, 255);
+    border-radius: 10px;
+    outline: 3px solid rgb(82, 167, 252);
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+}
+
+.topHeader {
+    color: white;
+    text-shadow: 3px 1px 2px black;
+    background-color:rgb(80, 147, 255);
+    padding: 10px 100px 10px 100px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.courseHeader {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 16px;
+    background-color:rgba(181, 181, 181, 0.581);
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px black;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoContainer {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 16px;
+    background-color:rgba(181, 181, 181, 0.581);
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px black;
+    width: 200px;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.classContainer {
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: 2px solid black
+}
