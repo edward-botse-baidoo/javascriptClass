@@ -57,7 +57,7 @@ for (const course of collegeCourses) {
 
    toggleButton.textContent = 'Toggle Details';
    
-   toggleButton.classLis.add('toggleButton')
+   toggleButton.classList.add('toggleButton')
    courseName.classList.add("courseHeader");
    courseInfo.classList.add("infoContainer");
    classContainer.classList.add("classContainer")
@@ -67,10 +67,14 @@ for (const course of collegeCourses) {
    courseInfo.appendChild(courseBuilding);
    courseInfo.appendChild(courseDesc);
 
-   
 
+   let showDesc = () => {
+    
+   }
 
+   toggleButton.addEventListener("click", showDesc)
 
+  
    classContainer.appendChild(courseName);
    classContainer.appendChild(toggleButton);
    originalCourseList.appendChild(classContainer);
