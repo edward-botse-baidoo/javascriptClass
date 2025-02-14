@@ -47,7 +47,7 @@ for (const course of collegeCourses) {
    let courseBuilding = document.createElement('p');
    let courseDesc = document.createElement('p');
 
-   let toggleButton = document.createElement('button')
+   let toggleButton = document.createElement('button');
 
    courseName.textContent = `${course.name}`;
    courseStart.textContent = `Start Time: ${course.startTime}`;
@@ -57,10 +57,10 @@ for (const course of collegeCourses) {
 
    toggleButton.textContent = 'Toggle Details';
    
-   toggleButton.classList.add('toggleButton')
+   toggleButton.classList.add('toggleButton');
    courseName.classList.add("courseHeader");
    courseInfo.classList.add("infoContainer");
-   classContainer.classList.add("classContainer")
+   classContainer.classList.add("classContainer");
 
    courseInfo.appendChild(courseStart);
    courseInfo.appendChild(courseRoom);
@@ -69,10 +69,20 @@ for (const course of collegeCourses) {
 
 
    let showDesc = () => {
-    
+    classContainer.appendChild(courseInfo);
+    toggleButton.removeEventListener("click", showDesc);
+    toggleButton.addEventListener("click", closeDesc)
    }
 
-   toggleButton.addEventListener("click", showDesc)
+   let closeDesc = () => {
+    classContainer.removeChild(courseInfo)
+    toggleButton.removeEventListener("click", closeDesc);
+    toggleButton.addEventListener('click', showDesc)
+    
+
+   }
+
+   toggleButton.addEventListener("click", showDesc);
 
   
    classContainer.appendChild(courseName);
