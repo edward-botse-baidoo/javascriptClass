@@ -8,6 +8,7 @@ body, html {
     width: 100vw;
     justify-content: space-around;
     align-items: center;
+    margin-top: 10px;
 
 }
 
@@ -84,4 +85,18 @@ body, html {
     box-shadow: 1px 1px 2px black;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.mainLogo {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 42px;
+    background-color:rgba(181, 181, 181, 0.581);
+    padding: 20px 50px, 20px, 50px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px black;
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
