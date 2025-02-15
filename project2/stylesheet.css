@@ -50,7 +50,7 @@ body, html {
 
 .infoContainer {
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 1px black;
     font-size: 16px;
     background-color:rgba(181, 181, 181, 0.581);
     padding: 10px 20px 10px 20px;
@@ -82,4 +82,6 @@ body, html {
     margin-right: auto;
     border-radius: 4px;
     box-shadow: 1px 1px 2px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

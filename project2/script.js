@@ -38,6 +38,25 @@ const collegeCourses = [
 
 const originalCourseList = document.querySelector('#courseContainer');
 
+let dragstartHandler = (ev) => {
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dataTransfer.effectAllowed = 'move';
+}
+
+let dragoverHandler = (ev) => {
+  ev.preventDefault();
+  ev.dataTransfer.dropEffect = 'move'
+}
+
+let dropHandler = (ev) => {
+  ev.preventDefault();
+  const classNode = document.getElementById(ev.dataTransfer.getData("text/plain"));
+  
+  if (ev.target.classList.contains("childContainer")) {
+      ev.target.appendChild(classNode);
+  }
+}
+
 for (const course of collegeCourses) {
    let classContainer = document.createElement("div");
    let courseName = document.createElement("h3");
@@ -75,14 +94,20 @@ for (const course of collegeCourses) {
    }
 
    let closeDesc = () => {
-    classContainer.removeChild(courseInfo)
+    classContainer.removeChild(courseInfo);
     toggleButton.removeEventListener("click", closeDesc);
-    toggleButton.addEventListener('click', showDesc)
+    toggleButton.addEventListener('click', showDesc);
     
 
    }
 
    toggleButton.addEventListener("click", showDesc);
+   
+   classContainer.setAttribute("id", `course-${course.name.replace(/\s+/g, '-')}`);
+
+   classContainer.setAttribute("draggable", "true");
+   classContainer.addEventListener("dragstart", dragstartHandler);
+   
 
   
    classContainer.appendChild(courseName);
